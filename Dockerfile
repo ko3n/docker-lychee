@@ -24,11 +24,11 @@ RUN \
  echo "**** install lychee ****" && \
  mkdir -p \
 	/usr/share/webapps/lychee && \
- lychee_tag=$(curl -sX GET "https://api.github.com/repos/electerious/Lychee/releases/latest" \
+ lychee_tag=$(curl -sX GET "https://api.github.com/repos/ko3n/Lychee/releases/latest" \
 	| awk '/tag_name/{print $4;exit}' FS='[""]') && \
  curl -o \
  /tmp/lychee.tar.gz -L \
-	"https://github.com/electerious/Lychee/archive/${lychee_tag}.tar.gz" && \
+	"https://github.com/ko3n/Lychee/archive/${lychee_tag}.tar.gz" && \
  tar xf \
  /tmp/lychee.tar.gz -C \
 	/usr/share/webapps/lychee --strip-components=1 && \
